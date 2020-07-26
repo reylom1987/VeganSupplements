@@ -1,13 +1,20 @@
 import React from "react";
-import logo from "./logo.svg";
+
 import "./App.css";
 
 function App() {
+  const openMenu = () => {
+    document.querySelector(".sidebar").classList.add("open");
+  };
+
+  const closeMenu = () => {
+    document.querySelector(".sidebar").classList.remove("open");
+  };
   return (
     <div className="grid-container">
       <header className="header">
         <div className="brand">
-          <button onclick="openMenu()">&#9776;</button>
+          <button onClick={openMenu}>&#9776;</button>
           <a href="index.html">Vegan Supplements</a>
         </div>
         <div className="header-links">
@@ -17,7 +24,7 @@ function App() {
       </header>
       <aside className="sidebar">
         <h3>Shopping Categores</h3>
-        <button className="sidebar-close-button" onclick="closeMenu()">
+        <button className="sidebar-close-button" onClick={closeMenu}>
           x
         </button>
         <ul>
