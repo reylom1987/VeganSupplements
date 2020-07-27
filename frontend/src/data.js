@@ -1,6 +1,7 @@
 export default {
   products: [
     {
+      _id: "1",
       name: "Chocolate Protein",
       category: "Protein Powders",
       image: "images/orgain.jpg",
@@ -10,6 +11,7 @@ export default {
       numReviews: 10,
     },
     {
+      _id: "2",
       name: "Tshirt",
       category: "Shirts",
       image: "images/shirt.jpg",
@@ -19,6 +21,7 @@ export default {
       numReviews: 20,
     },
     {
+      _id: "3",
       name: "Multivitamin",
       category: "Vitamins and Minerals",
       image: "images/multivitamin.jpeg",
