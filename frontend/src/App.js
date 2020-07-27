@@ -19,7 +19,7 @@ function App() {
         <header className="header">
           <div className="brand">
             <button onClick={openMenu}>&#9776;</button>
-            <a href="index.html">Vegan Supplements</a>
+            <Link to="/">Vegan Supplements</Link>
           </div>
           <div className="header-links">
             <a href="cart.html">Cart</a>
@@ -45,29 +45,8 @@ function App() {
         </aside>
         <main className="main">
           <div className="content">
-            <Route path="/products/:id" component={ProductScreen} />
+            <Route path="/product/:id" component={ProductScreen} />
             <Route path="/" exact={true} component={HomeScreen} />
-            <ul className="products">
-              {data.products.map((product) => (
-                <li>
-                  <div className="product">
-                    <img
-                      className="product-image"
-                      src={product.image}
-                      alt="product"
-                    />
-                    <div className="product-name">
-                      <a href="product.html">{product.name}</a>
-                    </div>
-                    <div className="product-brand">{product.brand}</div>
-                    <div className="product-price">{product.price}</div>
-                    <div className="product-ratings">
-                      {product.ratings} Stars {product.numReviews}
-                    </div>
-                  </div>
-                </li>
-              ))}
-            </ul>
           </div>
         </main>
         <footer className="footer">All right reserved</footer>
